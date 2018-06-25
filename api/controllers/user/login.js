@@ -3,8 +3,7 @@ module.exports = async function userLogin(req,res,next) {
 
   let username = req.query.username;
   let password = req.query.password;
-
-
+  
   sails.hooks.authmanager.passport.authenticate('local', (err,user,info) => {
 
     if(err) {
